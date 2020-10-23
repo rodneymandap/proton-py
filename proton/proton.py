@@ -65,27 +65,25 @@ class Location(Proton):
         super().__init__(*args, **kwargs)
         self.prefix_url = 'https://api.proton-graph.cloud/public/locations/api'
 
-    def get(self, url=None):
-        """
-            Return names and numbers only
-            Useful for caching purposes
-        """
-        url = f"{self.prefix_url}/v2/locations/dump"
-        return super().get(url)
 
     def get_location_id(self, id):
         """
             Return locations that corresponds to id provided
         """
         url = f"{self.prefix_url}/v2/locations/{id}"
-        return super().get(url)
+        return self.get(url)
 
     def get_location_feature(self, id):
         """
             Gets a single location feature by its key identifier. Location features define special services within a location such as on site lunch bars, showers, parking, gym, etc...
         """
-        url = f"{self.prefix_url}/v2/locationfeatures/{id}"
-        return super().get(url)
+        url = f"{self.prefix_url}/v2/locations/{id}/occupancy"
+        return self.get(url)
+        pass
+
+    def get_location_occupancy(self, id):
+        url = f"{self.prefix_url}/v2/locations/{id}/occupancy"
+        return self.get(url)
 
 
 class Booking(Proton):
