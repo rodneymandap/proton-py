@@ -1,3 +1,6 @@
 __pycache__
 keys.txt
 locations.json
+.vscode
+.pytest_cache
+proton.egg-info
