@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="proton-py",
-    version="0.0.1",
+    version="0.1.0",
     author="rodneymandap",
     author_email="rodneyjan.mandap@gmail.com",
     description="Python package to connect to IWG Proton API",
