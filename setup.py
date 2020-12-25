@@ -4,10 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="proton",
-    version="0.0.1",
+    name="proton-py",
+    version="0.1.0",
     author="rodneymandap",
-    author_email="rodneyjan.mandap@iwgplc.com",
+    author_email="rodneyjan.mandap@gmail.com",
     description="Python package to connect to IWG Proton API",
     long_description=long_description,
     url="https://github.com/rodneymandap/iwg-proton",

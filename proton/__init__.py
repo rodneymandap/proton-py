@@ -1,1 +1,1 @@
-from .proton import Location, Booking, Proton
+from .proton import Proton 
